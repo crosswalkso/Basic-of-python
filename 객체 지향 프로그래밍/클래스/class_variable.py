@@ -15,7 +15,7 @@ class Makeword2:
     result = []
 
     def __init__(self, text):
-        self.result += text
+        self.result.append(text)
 
     def print_word(self):
         print(self.result)
@@ -45,6 +45,7 @@ if __name__ == "__main__":
     n.print_word()
 
     print("=====리스트 self로 접근=====")
+    # x.result, y.result의 id값이 같다.
     x = Makeword2("x")
     y = Makeword2("y")
 
@@ -52,7 +53,7 @@ if __name__ == "__main__":
     y.print_word()
 
     print("=====문자열 self로 접근=====")
-
+    # a.result, b.result ... 의 id값이 다르다.
     a = Makeword_error("a")
     b = Makeword_error("b")
     c = Makeword_error("c")
